@@ -10,7 +10,8 @@ import {
 	NavSearch,
 	Addition,
 	Button,
-	SearchWrapper
+	SearchWrapper,
+	SearchInfo
 } from './style';
 
 const Header = (props) => {
@@ -37,6 +38,7 @@ const Header = (props) => {
 			     ></NavSearch>
 			     </CSSTransition>
 			     <i className= {props.focused ? 'focused iconfont': 'iconfont'}>&#xe602;</i>
+			     <SearchInfo></SearchInfo>
 			     </SearchWrapper>
 			   </Nav>
 			   <Addition>
@@ -50,7 +52,7 @@ const Header = (props) => {
 }
 const mapStateToProps = (state) => {
    return {
-      focused: state.header.get('focused')
+      focused: state.getIn(['header', 'focused'])
    }
 }
 const mapDispatchToProps = (dispatch) => {
