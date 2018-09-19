@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ### * Layout: styled-components,Reset.css
-Benifit: Every component can be styled separately and Reset.css ensures same default style in different browsers.
+Benifit: Every component can be styled separately and Reset.css ensures same default style in different browsers.<br/>
 Code sample:
 ```Javascript
 import { injectGlobal } from 'styled-components';
@@ -78,8 +78,8 @@ export const Logo = styled.a.attrs({
 ```
 
 
-* Enbed icon in components with iconfont
-Benifit: make components looks special
+### * Enbed icon in components with iconfont
+Benifit: make components looks special<br/>
 Code Sample:
 ```Javascript
 			     <SearchWrapper>
@@ -100,7 +100,8 @@ Code Sample:
 ```
 
 ### * Use React-Redux framwork
-Benifit: Sepatates UI and data control, good for management of the state and the layout of UI and makes easy maitanence of code in future.
+Benifit: Sepatates UI and data control, good for management of the state and the layout of UI and makes easy maitanence of code in future.<br/>
+Code sample:
 ```Javascript
 const mapStateToProps = (state) => {
    return {
@@ -145,7 +146,8 @@ export default (state = defaultState, action)=>{
 }
 ```
 ### * Use Combine Reducer
-Benifit: Combine a reducer with different 'small reducers', and every 'small reducers' controls the data of a section.
+Benifit: Combine a reducer with different 'small reducers', and every 'small reducers' controls the data of a section.<br/>
+Code sample:
 ```Javascript
 import {combineReducers} from 'redux-immutable';
 import {reducer as headerReducer } from '../common/header/store';
@@ -158,6 +160,7 @@ export default reducer;
 ```
 
 ### * write actions in actionCreator.js and constant in constant.js, which makes easy maitanence of code in future.
+Code sample
 ```Javascript
 import * as constants from './constants';
 
@@ -171,6 +174,7 @@ export const searchBlur = () => ({
 ```
 
 ### * use redux-immutable to manage the data of the page to ensure the immutability of the data.
+Code sample:
 ```Javascript
 import * as constants from './constants';
 import { fromJS } from 'immutable';
